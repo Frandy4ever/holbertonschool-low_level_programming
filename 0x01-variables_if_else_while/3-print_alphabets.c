@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 /**
- * main _ Prints alphabet in lowercase, and then in uppercase
+ * main - Prints alphabet in lowercase, and then in uppercase
  *
  * Return: Always 0.
  *
