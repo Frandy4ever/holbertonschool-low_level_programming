@@ -23,17 +23,20 @@ srand(time(0));
 n = rand() - RAND_MAX / 2;
 f = n % 10;
 
-if (n > 5)
+if (f > 5)
 {
 printf("Last digit of %i is %i and is greater than 5\n",n,f);
 }
-else if (n == 0)
+else if (f == 0)
 {
 printf("Last digit of %i is %i and is 0\n",n,f);
 }
 else
 {
-printf("Last digit of %i is %i and is less than 6 ans not 0\n",n,f);
+printf("/*
+		 * File: 
+		 *  * Auth: Frandy Slueue @holbertonschool
+		 *   */Last digit of %i is %i and is less than 6 ans not 0\n",n,f);
 }
 
 return (0);
