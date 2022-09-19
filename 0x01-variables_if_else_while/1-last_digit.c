@@ -1,5 +1,5 @@
 /*
- *  * File: 
+ *  * File: 1-last_digit.c
  *   * Auth: Frandy Slueue @holbertonschool
  *    */
 #include <stdio.h>
@@ -33,10 +33,7 @@ printf("Last digit of %i is %i and is 0\n",n,f);
 }
 else
 {
-printf("/*
-		 * File: 
-		 *  * Auth: Frandy Slueue @holbertonschool
-		 *   */Last digit of %i is %i and is less than 6 ans not 0\n",n,f);
+printf("Last digit of %i is %i and is less than 6 and not 0\n",n,f);
 }
 
 return (0);
