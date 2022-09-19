@@ -2,7 +2,7 @@
  * File: 0-positive_or_negative.c
  * Auth: Frandy Slueue @holbertonschool
  */
-#include <stddlib.h>
+#include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
 
