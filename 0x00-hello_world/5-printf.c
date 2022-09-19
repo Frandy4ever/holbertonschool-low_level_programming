@@ -13,7 +13,7 @@
  */
 int main(void)
 {
-	puts("\n"with proper gramar, but the outcome is a piece of art, ");
+	printf("\n"with proper gramar, but the outcome is a piece of art, ");
 
 	return (0);
 }
