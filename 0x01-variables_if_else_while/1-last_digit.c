@@ -25,15 +25,15 @@ f = n % 10;
 
 if (n > 5)
 {
-printf("last digit of %i is %i and is greater than 5\n",n,f);
+printf("Last digit of %i is %i and is greater than 5\n",n,f);
 }
 else if (n == 0)
 {
-printf("last digit of %i is %i and is 0\n",n,f);
+printf("Last digit of %i is %i and is 0\n",n,f);
 }
 else
 {
-printf("last digit of %i is %i and is less than 6 ans not 0\n",n,f);
+printf("Last digit of %i is %i and is less than 6 ans not 0\n",n,f);
 }
 
 return (0);
