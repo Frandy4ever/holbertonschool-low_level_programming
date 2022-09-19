@@ -18,9 +18,10 @@ int main(void)
 {
 int n;
 int f;
-f = n % 10;
+
 srand(time(0));
 n = rand() - RAND_MAX / 2;
+f = n % 10;
 
 if (n > 5)
 {
