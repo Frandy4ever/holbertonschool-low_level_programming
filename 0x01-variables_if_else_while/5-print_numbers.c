@@ -18,9 +18,7 @@ int main(void)
 
 int frandy;
 
-for (int frandy = 0; frandy <= 10; frandy++)
-
-
+for (frandy = 0; frandy < 10; frandy++)
 printf("%d", frandy);
 
 printf("\n");
