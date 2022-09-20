@@ -22,6 +22,8 @@ for (frandy = 0; frandy < 10; frandy++)
 putchar((frandy % 10) + '0');
 
 for (slueue = 'a'; slueue <= 'f'; slueue++)
+putchar(slueue);
+
 putchar('\n');
 
 return (0);
