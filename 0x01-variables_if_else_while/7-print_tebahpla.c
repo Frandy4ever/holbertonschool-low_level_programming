@@ -16,7 +16,7 @@ int main(void)
 
 char frandy;
 
-for (frandy = 'z'; frandy >= 'a'; frandy++)
+for (frandy = 'z'; frandy >= 'a'; frandy--)
 
 putchar(frandy);
 
