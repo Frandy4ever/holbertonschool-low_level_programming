@@ -17,7 +17,7 @@ void print_alphabet(void)
 
 char frandy;
 
-for (frandy - 'a'; frandy <= 'z'; frandy++)
+for (frandy = 'a'; frandy <= 'z'; frandy++)
 
 {
 
