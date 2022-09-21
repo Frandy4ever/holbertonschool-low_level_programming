@@ -18,7 +18,7 @@ int frandy = 0;
 char slueue;
 char g[] = "_putchar\n";
 
-while (frandy <= 7)
+while (frandy <= 8)
 {
 
 slueue = g[frandy];
