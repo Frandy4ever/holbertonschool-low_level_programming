@@ -13,6 +13,7 @@
  */
 
 int _islower(int frandy)
+
 {
 
 if (frandy >= 'a' && frandy <= 'z')
