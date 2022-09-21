@@ -2,7 +2,7 @@
  * File: 0-putchar.c
  * Auth: Frandy G. Slueue @holbertonschool
  */
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - Prints _putchar, followed by a new line
@@ -14,19 +14,19 @@ int main(void)
 
 {
 
-int frandy[] = {95, 112, 117, 116, 99, 104, 97, 114};
-int g, slueue;
+int frandy = 0;
+char slueue;
+char g[] = "_putchar\n";
 
-slueue = sizeof(frandy) / sizeof(int);
-for (g = 0; g < slueue; g++)
-
+while (frandy <= 7)
 {
 
-putchar(frandy[g]);
+slueue = g[frandy];
+_putchar(slueue);
 
+frandy++;
 }
 
-putchar('\n');
 return (0);
 
 }
