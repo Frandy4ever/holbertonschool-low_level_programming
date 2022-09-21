@@ -1,0 +1,45 @@
+/*
+ * File: 9-times_table.c
+ * Auth: Frandy Slueue @holbertonschool
+ */
+
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * times_table - Prints the times up to 9
+ *
+ * Return: void
+ */
+
+void times_table(void)
+
+{
+int a, b, c, d, e;
+for (a = 0; a < 10; a++)
+{
+for (b = 0; b < 10; b++)
+{
+c = a * b;
+d = c / 10;
+e = c % 10;
+if (b == 0)
+
+_putchar('0');
+else if (c < 10)
+{
+_putchar(' ');
+_putchar('0' + e);
+}
+
+if (b < 9)
+{
+_putchar(',');
+_putchar(' ');
+}
+
+else
+_putchar('\n');
+}
+}
+}
