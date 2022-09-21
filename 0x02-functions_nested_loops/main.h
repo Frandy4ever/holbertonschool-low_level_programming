@@ -12,24 +12,53 @@
  *
  * Return: on success `.
  * On error, -1 is returned, and error is set appropretelyl
- * */
+ */
 
 
 int _putchar(char c);
 
 
+/**
+ *  * void print_alphabet - write the character c to stdout
+ *   * @c: The character to print
+ *    *
+ *     *
+ *      * Return: on success `.
+ *       * On error, -1 is returned, and error is set appropretelyl
+ */
 
 void print_alphabet(void);
 
-
+/**
+ *  * void print_alphabet_x10 - write the character c to stdout
+ *   * @c: The character to print
+ *    *
+ *     *
+ *      * Return: on success `.
+ *       * On error, -1 is returned, and error is set appropretelyl
+ */
 
 void print_alphabet_x10(void);
 
-
+/**
+ *  int _islower - write the character c to stdout
+ *   * @c: The character to print
+ *    *
+ *     *
+ *      * Return: on success `.
+ *       * On error, -1 is returned, and error is set appropretelyl
+ */
 
 int _islower(int c);
 
-
+/**
+ *  int _isalpha - write the character c to stdout
+ *   * @c: The character to print
+ *    *
+ *     *
+ *      * Return: on success `.
+ *       * On error, -1 is returned, and error is set appropretelyl
+ */
 
 int _isalpha(int c);
 
