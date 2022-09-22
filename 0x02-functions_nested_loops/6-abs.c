@@ -9,20 +9,13 @@
  * _abs - computes the absolute value of an integer
  * @frandy: integer to check
  *
- * Return: Always value of int
+ * Return: Always absolute value of int
  */
 
 int _abs(int frandy)
 
 {
 
-int frandy = 0;
-
 if (frandy < 0)
-{
-putchar(frandy * (-1));
-}
-putchar('\');
-
-return (frandy);
+return (frandy * (-1));
 }
