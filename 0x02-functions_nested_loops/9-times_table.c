@@ -1,16 +1,16 @@
 /*
- * File: 9-times_table.c
- * Auth: Frandy Slueue @holbertonschool
- */
+* File: 9-times_table.c
+* Auth: Frandy Slueue @holbertonschool
+*/
 
 #include "main.h"
-#include <stdio.h>
+
 
 /**
- * times_table - Prints the times up to 9
- *
- * Return: void
- */
+* times_table - Prints the times up to 9
+* starting from 0
+*
+*/
 
 void times_table(void)
 
