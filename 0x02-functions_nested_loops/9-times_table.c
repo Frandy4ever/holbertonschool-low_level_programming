@@ -15,31 +15,28 @@
 void times_table(void)
 
 {
-int a, b, c, d, e;
-for (a = 0; a < 10; a++)
-{
-for (b = 0; b < 10; b++)
-{
-c = a * b;
-d = c / 10;
-e = c % 10;
-if (b == 0)
+int frandy, g, slueue;
 
+for (frandy = 0; frandy <= 9; frandy++)
 _putchar('0');
-else if (c < 10)
-{
-_putchar(' ');
-_putchar('0' + e);
-}
 
-if (b < 9)
+for (g = 1; g <= 9; g++)
 {
 _putchar(',');
 _putchar(' ');
-}
+
+slueue = frandy * g;
+
+if (slueue <= 9 )
+_putchar(' ');
 
 else
-_putchar('\n');
+_putchar((slueue / 10) + '0');
+
+_putchar((slueue % 10) + '0');
 }
+
+_putchar('\n');
+
 }
 }
