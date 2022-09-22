@@ -7,23 +7,28 @@
 #include <stdio.h>
 
 /**
- * print_to_98 - Prints from any integer to 98
- * @n: integer input
- *
- * Return: void
- */
+* print_to_98 - Prints from any integer to 98
+* @frandy: integer input
+*
+*/
 
-void print_to_98(int n)
+void print_to_98(int frandy)
 
 {
-
-while (n != 98)
+if (frandy >= 98)
 {
-printf("%i, ", n);
-if (n > 98)
-n++;
+
+while (frandy > 98)
+printf("%d, ", frandy--);
+printf("%d\n", frandy);
+
 }
+else
+{
 
-printf("98\n");
+while (frandy < 98)
+printf("%d, ", frandy++);
+printf("%d\n", frandy);
+}
 
 }
