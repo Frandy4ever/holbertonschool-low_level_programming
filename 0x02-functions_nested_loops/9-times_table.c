@@ -18,6 +18,7 @@ void times_table(void)
 int frandy, g, slueue;
 
 for (frandy = 0; frandy <= 9; frandy++)
+{
 _putchar('0');
 
 for (g = 1; g <= 9; g++)
