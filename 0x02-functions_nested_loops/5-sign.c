@@ -13,7 +13,7 @@
  */
 
 int print_sign(int frandy)
-vin
+
 {
 
 
