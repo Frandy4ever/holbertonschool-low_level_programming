@@ -16,8 +16,10 @@ int _abs(int frandy)
 
 {
 
-if (frandy < 0)
-return (frandy * (-1));
+if (frandy >= 0)
+return (frandy);
+else
+return (-frandy);
 
 }
 
