@@ -28,7 +28,7 @@ _putchar(' ');
 
 slueue = frandy * g;
 
-if (slueue <= 9 )
+if (slueue <= 9)
 _putchar(' ');
 
 else
