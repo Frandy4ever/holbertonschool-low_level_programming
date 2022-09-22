@@ -7,7 +7,7 @@
 
 /**
  * _islower - Checks for lowercase letters
- * @c: character to check
+ * @frandy: character to check
  *
  * Return: 0 or 1
  */
