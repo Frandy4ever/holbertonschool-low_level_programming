@@ -16,12 +16,15 @@
 void print_numbers(void)
 {
 
-char = f;
+char f;
 
 for (f = '0'; f <= '9'; f++)
 {
-_putchar (f);
-}
-_putchar('\n');
+
+_putchar(f);
 
 }
+
+_putchar('\n');
+
+} 
