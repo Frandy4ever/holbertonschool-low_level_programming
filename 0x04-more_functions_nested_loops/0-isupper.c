@@ -2,12 +2,12 @@
  * file: 0-isupper.c
  * Auth: Frandy Slueue @holbertonschool
  */
-#include "main4.h"
+#include "main.h"
 #include <ctype.h>
 
 /**
- * int _isupper - Checks for uppercase character
- *
+ *_isupper - Checks for uppercase character
+ *@c: uppercase character
  * Return: 1 or 0
  */
 
