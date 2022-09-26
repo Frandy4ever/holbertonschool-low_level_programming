@@ -1,0 +1,11 @@
+n('~/.vim/plugged')
+
+"Fugitive Vim Github Wrapper
+Plug 'tpope/vim-fugitive'
+
+
+
+
+
+
+call plug#end()
