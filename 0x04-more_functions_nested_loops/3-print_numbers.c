@@ -8,19 +8,20 @@
 /**
  * print_numbers - prints numbers, from 0 to 9,
  * followed by a new line
- *
- * Return: 0
+ *@c: used to print int
+
+ * Return: void
  */
 
 void print_numbers(void)
 {
 
-int num;
+char = f;
 
-for (num = 0; num <= 9; num++)
+for (f = '0'; f <= '9'; f++)
 {
-_putchar(num);
+_putchar (f);
 }
-_putchar("\n");
+_putchar('\n');
 
 }
