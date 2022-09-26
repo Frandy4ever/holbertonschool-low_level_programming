@@ -3,7 +3,7 @@
  * Auth: Frandy Slueue @holbertonschool
  */
 #include "main.h"
-#include <ctype.h>
+
 
 /**
  *_isupper - Checks for uppercase character
@@ -14,7 +14,7 @@
 int _isupper(int c)
 {
 
-if (isupper(c))
+if (c >= 'A' && c <= 'Z')
 return (1);
 
 else
