@@ -7,7 +7,7 @@
 
 /**
  * _puts - Prints string to stdout
- * @*str: string to print
+ * @str: string to print
  *
  * Return: String
  */
