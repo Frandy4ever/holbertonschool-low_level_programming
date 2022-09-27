@@ -7,15 +7,15 @@
 
 /**
  * _isupper - Checks for uppercase letters
- * @f: character to check
+ * @c: character to check
  *
  * Return: 0 or 1
  */
 
-int _isupper(int f)
+int _isupper(int c)
 {
 
-if (f >= 'A' && f <= 'Z')
+if (c >= 'A' && c <= 'Z')
 return (1);
 
 else
