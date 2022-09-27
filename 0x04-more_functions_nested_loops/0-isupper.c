@@ -4,12 +4,13 @@
  */
 
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _isupper - Checks for uppercase letters
  * @c: character to check
  *
- * Return: 0 or 1
+ * Return: 1 or 0
  */
 
 int _isupper(int c)

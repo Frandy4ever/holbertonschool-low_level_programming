@@ -1,0 +1,12 @@
+#include <unistd.h>
+
+/**
+_putchar - write the character f to stdout
+@f: The character to print
+
+Return: 0 on seccess
+On error, -1 is returned, and error is set appropretely
+*/
+
+_putchar(char f)
+return (write(1, &f, 1));
