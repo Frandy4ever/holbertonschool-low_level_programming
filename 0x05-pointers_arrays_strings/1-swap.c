@@ -7,9 +7,9 @@
 #include <stdio.h>
 
 /**
- * swap_int - Swaps the values of two integers
- * @*a: first integer to be swapped
- * @*b: second integer to be swapped
+ * swap_int - Swaps the values of two ints
+ * @a: first integer to be swapped
+ * @b: second integer to be swapped
  *
  * Return: swapped result
  */
