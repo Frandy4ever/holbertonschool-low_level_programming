@@ -15,16 +15,30 @@
 void more_numbers(void)
 {
 
-int max = 14;
+char a, b, c, i;
 
-for (int a = 1; a <= 10; a++)
+for (i = 0; i < 10; i++)
 {
 
-for (int c = 0; c <= max; c++)
+for (c = 0; c <= 14; c++)
 {
-_putchar(c);
+
+if (c < 10)
+b = c;
+
+
+else
+{
+a = c / 10; b = c % 10;
+
+_putchar('0' + a);
+}
+
+_putchar('0' + b);
 }
 
 _putchar('\n');
 }
+
+
 }
