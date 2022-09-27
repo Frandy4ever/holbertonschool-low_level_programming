@@ -22,6 +22,7 @@ while (*(str + i))
 {
 
 _putchar(*(str + i));
+
 i = i + 2;
 }
 
