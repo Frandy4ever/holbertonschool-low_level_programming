@@ -1,8 +1,8 @@
 #include <unistd.h>
 
-0/**
+/**
 _putchar - write the character c to stdout
-@c: The character to print
+@c: The charactor to print
 
 Return: 0 on seccess
 On error, -1 is returned, and error is set appropretely
