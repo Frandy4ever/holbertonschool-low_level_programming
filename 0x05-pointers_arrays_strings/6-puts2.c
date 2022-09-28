@@ -17,13 +17,17 @@ void puts2(char *str)
 {
 
 int i = 0;
+int count;
 
-while (*(str + i))
+while (*(str + count) != '\0')
+count++;
+
+while (i < count)
 {
 
 _putchar(*(str + i));
 
-i = i + 1;
+i = i + 2;
 }
 
 _putchar('\n');
