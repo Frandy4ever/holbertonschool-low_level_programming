@@ -16,18 +16,21 @@
 void puts2(char *str)
 {
 
-int i = 0;
-int count;
+int i, a;
 
-while (*(str + count) != '\0')
-++count;
+i = 0;
 
-while (i < count)
+while (str[i] != '\0')
+i++;
+
+i--;
+
+for (a = 0; a <= i; a++)
 {
 
-_putchar(*(str + i));
+if (a % 2 == 0)
 
-i = i + 2;
+_putchar(str[a]);
 }
 
 _putchar('\n');
