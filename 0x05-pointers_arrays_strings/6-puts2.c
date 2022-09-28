@@ -20,7 +20,7 @@ int i = 0;
 int count;
 
 while (*(str + count) != '\0')
-count++;
+++count;
 
 while (i < count)
 {
