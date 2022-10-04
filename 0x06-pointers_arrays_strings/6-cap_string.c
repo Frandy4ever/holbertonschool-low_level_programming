@@ -14,30 +14,30 @@
 
 char *cap_string(char *str)
 {
-	int frandy = 0;
+	int f = 0;
 
-	while (str[frandy])
+	while (str[f])
 	{
-		while (!(str[frandy] >= 'a' && str[frandy] <= 'z'))
-			frandy++;
+		while (!(str[f] >= 'a' && str[f] <= 'z'))
+			f++;
 
-		if (str[frandy - 1] == ' ' ||
-				str[frandy - 1] == '\t' ||
-				str[frandy - 1] == '\n' ||
-				str[frandy - 1] == ',' ||
-				str[frandy - 1] == ';' ||
-				str[frandy - 1] == '.' ||
-				str[frandy - 1] == '!' ||
-				str[frandy - 1] == '?' ||
-				str[frandy - 1] == '"' ||
-				str[frandy - 1] == '(' ||
-				str[frandy - 1] == ')' ||
-				str[frandy - 1] == '{' ||
-				str[frandy - 1] == '}' ||
-				frandy == 0)
-			str[frandy] -= 32;
+		if (str[f - 1] == ' ' ||
+			str[f - 1] == '\t' ||
+			str[f - 1] == '\n' ||
+			str[f - 1] == ',' ||
+			str[f - 1] == ';' ||
+			str[f - 1] == '.' ||
+			str[f - 1] == '!' ||
+			str[f - 1] == '?' ||
+			str[f - 1] == '"' ||
+			str[f - 1] == '(' ||
+			str[f - 1] == ')' ||
+			str[f - 1] == '{' ||
+			str[f - 1] == '}' ||
+			f == 0)
+			str[f] -= 32;
 
-		frandy++;
+		f++;
 	}
 	return (str);
 }
