@@ -8,7 +8,7 @@
 /**
  * _strcmp - Compares two strings
  * @s1: Point to the 1st string to be compared
- * #s2: Point to the 2nd string to be compared
+ * @s2: Point to the 2nd string to be compared
  *
  * Return: str1 == str2, the negative diff of first unmatched char
  *	str1 == str2, 0
