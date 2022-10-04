@@ -3,33 +3,27 @@
  * Auth: Frandy Slueue @holbertonschool
  */
 
- #include "main.h"
- #include <stdio.h>
-#include <string.h>
+ #include "holberton.h"
 
 /**
- * _strcat - Concatenates two memories strings
- * @dest: string to be appended to
- * @src: string that will appended
- *@n: number of space to fill
- * 
- * Return: Pointer to string dest
+ * _strcat - Concatenate two strings. Append the src string
+ *	to the dest string.
+ * @dest: Destination pointer to be concatenated upon
+ * @src: Source string that will append to @dest
+ *
+ * Return: A pointer to the destination string @dests
  */
 
 char *_strcat(char *dest, char *src)
-
 {
-unsigned int i;
-i = 0;
-while (i < n)
-{
-dest[i] = src;
-i++;
-}
+	int i = 0, dest_len = 0;
 
+	while (dest[i++])
+		dest_len++;
 
+	for (i = 0; src[i]; i++)
+		dest[dest_len++] = src[i];
 
-return (dest);
+	return (dest);
 
 }
-
