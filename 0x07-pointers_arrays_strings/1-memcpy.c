@@ -11,18 +11,19 @@
  *@dest: A pointer to the memory area to copy @src into
  *@src: The source buffer to copy characters from
  *@n: The number of bytes to copy from @src
+ *
+ * Return: pointer to dest
  */
 
-void *_memcpy(void *dest, const void *src, size_t n)
-
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i;
-	unsigned char *destination = dest;
-	const unsigned char *source = src;
+unsigned int i;
 
-	for (i = 0; i < n; i++)
-		destination[i] = source[i];
+for (i = 0; i < n; i++)
+{
+	*(dest + i) = *(src + i);
+}
 
-	return (dest);
+return (dest);
 
 }
