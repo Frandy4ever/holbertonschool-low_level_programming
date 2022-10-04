@@ -1,27 +1,30 @@
-
+/*
+ * File: 0-memset.c
+ * Auth: Frandy Slueue @holbertonschool
+ */
 
 
 
 #include "holberton.h"
 
 /**
- * memset - File the first n bytes of the memory area
- *	pointed to by @s with constant byte @c
- * @s: A pointer to the memory area to be filed
- * @c: The character to fill the memory area with
- * @n: The number of bytes to be filled
+ * _memset - Fills memory with a constant byte
+ * @s: memory space to be filled
+ * @b: byte to fill with
+ * @n: number of spaces to fill
  *
- * Return: A pointer to the filed memory area @s
+ * Return: pointer to memory area s
  */
 
-void *_memset(void *s, int c, size_t n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
-	unsigned char *memory = s, value = c;
 
 	for (i = 0; i < n; i++)
-		memory[i] = value;
+	{
+		*(s + i) = b;
+	}
 
-	return (memory);
+	return (s);
 
 }
