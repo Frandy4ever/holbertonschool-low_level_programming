@@ -11,9 +11,9 @@ int isDivisible(int num, int div);
  * isDivisible - Checks if a number is divisible
  * @num: The number to be checked
  * @div: Divisor
- * 
+ *
  * Return: If the number is divisible - 0
- * 		if the number is not divisible
+ *		if the number is not divisible
  */
 
 int isDivisible(int num, int div)
@@ -31,17 +31,17 @@ int isDivisible(int num, int div)
 
 /**
  * is_prime_number - Returns 1 if the input
- * 		integer is a prime number otherwise 0 is returned
+ *		integer is a prime number otherwise 0 is returned
  * @n: inputted integer
  *
- * Returns: 1 if the input integer is a prime number otherwise 0
+ * Returns: 1 if the input integer is a prime number otherwise - 0
  */
 
 int is_prime_number(int n)
 {
 
 	int div = 2;
-	
+
 	if (n <= 1)
 		return (0);
 
