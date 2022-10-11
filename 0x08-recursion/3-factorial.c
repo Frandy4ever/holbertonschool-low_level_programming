@@ -4,6 +4,7 @@
  */
 
 #include <stdio.h>
+int factorial(int n);
 
 /**
  * factorial - Returns the factorial of a given number
@@ -26,7 +27,7 @@ int factorial(int n)
 		return (1);
 
 	result *= factorial(n - 1);
-	
+
 	return (result);
 
 }
