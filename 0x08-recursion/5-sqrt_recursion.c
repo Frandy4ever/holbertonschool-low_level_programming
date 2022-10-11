@@ -30,9 +30,9 @@ int findSquareRoot(int num, int root)
 
 /**
  * _sqrt_recursion - Returns the natural square root
- * 		of a number
+ *		of a number
  * @n: number whose natural square
- * 		root is to be returned
+ *		root is to be returned
  *
  * Return: Natural square root of a number or -1 if none
  */
@@ -42,6 +42,7 @@ int _sqrt_recursion(int n)
 {
 
 	int root = 0;
+
 	if (n < 0)
 		return (-1);
 
