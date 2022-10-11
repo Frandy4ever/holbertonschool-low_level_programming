@@ -7,16 +7,17 @@
 
 /**
  * factorial - Returns the factorial of a given number
- * @n: The number to find the factorial of
+ * @n: The number to be factored
  *
- * Return: if n > 0 - the factorial of n
- *		if n < 0, return 1
+ * Return: The factor of n if n > 0
+ *		or return -1 if n < 0
  */
 
 int factorial(int n)
+
 {
 
-int result = n;
+	int result = n;
 
 	if (n < 0)
 		return (-1);
@@ -25,5 +26,7 @@ int result = n;
 		return (1);
 
 	result *= factorial(n - 1);
+	
 	return (result);
+
 }
