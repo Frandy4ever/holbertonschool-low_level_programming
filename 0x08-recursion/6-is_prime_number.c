@@ -34,7 +34,8 @@ int isDivisible(int num, int div)
  *		integer is a prime number otherwise 0 is returned
  * @n: inputted integer
  *
- * Returns: 1 if the input integer is a prime number otherwise - 0
+ * Returns: If the input integer is a prime number, return 1
+ *		otherwise - 0
  */
 
 int is_prime_number(int n)
