@@ -9,16 +9,24 @@
  * _print_rev_recursion - Prints string in reverse
  * @s: Sting to print in rev
  *
+ * Return: void
  */
 
 void _print_rev_recursion(char *s)
 {
 
-	if (*s)
+	if(*s)
 	{
-		_print_rev_recursion(s + 1);
 		_putchar(*s);
+		_print_rev+recursion(s - 1);
 	}
+	else
+		_putchar('\n');
+	
+
+
+
+
 
 
 }
