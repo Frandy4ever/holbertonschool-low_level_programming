@@ -18,23 +18,22 @@
 char *_strdup(char *str)
 
 {
-	char *duplicate;
-	int index, len = 0;
+	char *a;
+	int i, c;
 
 	if (str == NULL)
 		return (NULL);
-for (index = 0; str[index]; index++)
+
+	for (i = 0; str[i] != '\0'; i++)
 		;
 
-			duplicate = malloc(len * sizeof(*duplicate) + 1);
+	a = malloc(i * sizeof(*a) + 1);
+	if (a == NULL)
+		return (NULL);
 
-			if (duplicate == NULL)
-			return (NULL);
+	for (c = 0; c < i; c++)
+		a[c] = str[c];
+	a[c] = '\0';
 
-			for (index = 0; str[index]; index++)
-			duplicate[index] = str[index];
-
-			duplicate[len] = '\0';
-
-			return (duplicate);
+	return (a);
 }
