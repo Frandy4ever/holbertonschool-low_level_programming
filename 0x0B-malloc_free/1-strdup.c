@@ -2,7 +2,7 @@
  * File: 1-strdup.c
  * Auth: Frandy Slueue @holbertonschool
  */
-
+#include <stdlib.h>
 #include "main.h"
 #include <stdio.h>
 
@@ -18,15 +18,15 @@
 char *_strdup(char *str)
 
 {
-	char *duplicates;
+	char *duplicate;
 	int index, len = 0;
 
 	if (str == NULL)
 		return (NULL);
-	for (index = 0; str[index]; index++;
-			len++;
+for (index = 0; str[index]; index++)
+		;
 
-			duplicate = malloc(size(char) * (len + 1));
+			duplicate = malloc(len * sizeof(*duplicate) + 1);
 
 			if (duplicate == NULL)
 			return (NULL);
@@ -37,4 +37,4 @@ char *_strdup(char *str)
 			duplicate[len] = '\0';
 
 			return (duplicate);
-			}
+}
