@@ -3,8 +3,8 @@
  * Auth: Frandy Slueue @holbertonschool
  */
 
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
  * create_array - Creates an array of chars and 
