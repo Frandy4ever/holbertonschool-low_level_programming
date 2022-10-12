@@ -1,23 +1,19 @@
-/**
+/*
  * File: 3-factorial.c
  * Auth: Frandy Slueue @holbertonschool
  */
 
-#include <stdio.h>
-int factorial(int n);
+#include "main.h"
 
 /**
- * factorial - Returns the factorial of a given number
- * @n: The number to be factored
+ * factorial - factorial of n number
+ * @n: number to be factored
  *
- * Return: The factor of n if n > 0
- *		or return -1 if n < 0
+ * Return: 0 or -1
  */
 
 int factorial(int n)
-
 {
-
 	int result = n;
 
 	if (n < 0)
@@ -27,7 +23,5 @@ int factorial(int n)
 		return (1);
 
 	result *= factorial(n - 1);
-
-	return (result);
-
+factorial(result);
 }
