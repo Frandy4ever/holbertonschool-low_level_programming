@@ -27,8 +27,8 @@ int primeChecker(int f, int p)
 }
 
 /**
- *is_prime_number - states if number is prime
- @n: number to check
+ * is_prime_number - states if number is prime
+ * @n: number to check
  *
  * Return: 1 if prime, 0 if not
  */
