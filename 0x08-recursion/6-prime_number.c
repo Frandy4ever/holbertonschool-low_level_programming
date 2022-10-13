@@ -6,42 +6,36 @@
 #include "main.h"
 
 /**
- * isDivisible - checks if n is divisible
- * @num: number to be checked
- * @div: divisor
+ * primeChecker - checks to see if n number is prime
+ * @f: factor checker
+ * @p: possible prime number
  *
- * Return: 0 or 1
+ * Return: 1 if prime, 0 if not
  */
 
-int isDivisible(int num, int div)
+int primeChecker(int f, int p)
 {
 
-	if (num % div == 0)
+	if (p < 2 || p % f == 0)
 		return (0);
 
-	if (div == num / 2)
+	else if (f > p / 2)
 		return (1);
 
-	return (isDivisible(num, div + 1));
+	else
+		return (primeChecker(f + 1, p));
 }
 
 /**
- * is_prime_number - return 1 if the input
- *	integer is a prime number otherwise 0 is return
- *@n: inputted integer
+ *is_prime_number - states if number is prime
+ @n: number to check
  *
- * Return: Prime number or -1
+ * Return: 1 if prime, 0 if not
  */
 
 int is_prime_number(int n)
 {
-	int div = 2;
-
-	if (n < 1)
-		return (0);
-
-if (n >= 2 && n <= 3)
-	return (1);
-
-return (isDivisible(n, div));
+	if (n == 2)
+		return (1);
+	return (primeChecker(2, n));
 }
