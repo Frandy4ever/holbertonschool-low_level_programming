@@ -17,23 +17,23 @@
 int *array_range(int min, int max)
 {
 
-	int i,f;
-	int *h
+	int i, f;
+	int *h;
 
-		if(min > max)
+		if (min > max)
 			return (NULL);
 
 	f = max - min + 1;
 	h = malloc(sizeof(int) * f);
 
-	if (a == NULL)
+	if (h == NULL)
 		return (NULL);
 
 	for (i = 0; i < f; i++, min++)
 	{
-		a[i] = min;
+		h[i] = min;
 	}
-	
-	return (a);
+
+	return (h);
 
 }
