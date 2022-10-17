@@ -8,7 +8,7 @@
 /**
  * main - prints the name of the compiling file
  *
- * Return: 0
+ * Return: Always 0
  */
 
 int main(void)
