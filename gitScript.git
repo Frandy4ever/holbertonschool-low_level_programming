@@ -13,4 +13,4 @@ read branch
 
 git push origin $branch
 
-readd
+read
