@@ -3,8 +3,6 @@
  * Auth: Frandy Slueue @holbertonschool
  */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "dog.h"
 
 /**
