@@ -49,7 +49,7 @@ if (dog->owner == NULL)
 	free(dog);
 	return (NULL);
 }
-for (paw = 0; paw < bone; paw++)
+for (paw = 0; paw < flea; paw++)
 dog->owner[paw] = owner[paw];
 return (dog);
 }
