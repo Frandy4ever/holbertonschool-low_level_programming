@@ -3,23 +3,24 @@
  * Auth: Frandy Slueue @holbertonschool
  */
 
-#include "dog.h"
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
- * new_dog - creates a new dog
+ * dog_t *new_dog - New var for struct dog
  * @name: dog's name
- * @age: dog's a
- * @owner: dog's owner
+ * @age: dog's age
+ * @owner: dog's 0wner
  *
- * Return: pointer to new dog
+ * Return: NULL if fails
  */
 
-dog_t *new_dog(char *name, float age, char *owner)
+dog_t *new_dog(char *name, char *owner, float age);
 {
 
-unsigned int bone, flea, paw;
+	unsigned int bone, flea, paw;
+
 dog_t *dog;
 
 if (name == NULL || owner == NULL)
@@ -34,7 +35,6 @@ for (bone = 0; name[bone]; bone++)
 bone++;
 
 dog->name = malloc(bone * sizeof(char));
-
 if (dog->name == NULL)
 {
 	free(dog);
