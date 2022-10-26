@@ -91,7 +91,7 @@ void print_all(const char * const format, ...)
 		}
 		j++;
 	}
-	putchar(10);
+	_putchar(10);
 	va_end(vls);
 }
 
