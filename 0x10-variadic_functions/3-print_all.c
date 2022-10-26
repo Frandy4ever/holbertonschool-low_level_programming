@@ -8,37 +8,37 @@
 #include "variadic_functions.h"
 
 /**
- * frandy_int - prints an integer type
+ * pr_int - prints an integer type
  * @val: a va_list struct to process
  */
-void frandy_int(va_list val)
+void pr_int(va_list val)
 {
 	printf("%d", va_arg(val, int));
 }
 
 /**
- * frandy_char - prints a char type
+ * pr_char - prints a char type
  * @val: a va_list struct to process
  */
-void frandy_char(va_list val)
+void pr_char(va_list val)
 {
 	printf("%c", va_arg(val, int));
 }
 
 /**
- * frandy_float - prints a double type
+ * pr_float - prints a double type
  * @val: a va_list struct to process
  */
-void frandy_float(va_list val)
+void pr_float(va_list val)
 {
 	printf("%f", va_arg(val, double));
 }
 
 /**
- * frandy_str - prints a string type or (nil) empty/NULL
+ * pr_str - prints a string type or (nil) empty/NULL
  * @val: a va_list struct to process
  */
-void frandy_str(va_list val)
+void pr_str(va_list val)
 {
 	char *r;
 
@@ -67,10 +67,10 @@ void print_all(const char * const format, ...)
 
 	va_list vls;
 	p_op ops[] = {
-		{"c", frandy_char},
-		{"i", frandy_int},
-		{"f", frandy_float},
-		{"s", frandy_str},
+		{"c", pr_char},
+		{"i", pr_int},
+		{"f", pr_float},
+		{"s", pr_str},
 		{NULL, NULL}
 	};
 
