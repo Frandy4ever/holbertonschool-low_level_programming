@@ -43,16 +43,9 @@ void pr_str(va_list val)
 	char *r;
 
 	r = va_arg(val, char *);
-	switch (!r)
-	{
-		case 0:
-			printf("%s", r);
-			break;
-
-		case 1:
-			printf("(nil)");
-			break;
-	}
+if(r == NULL)
+	r = "(nil)";
+printf("%s", r);
 }
 
 /**
@@ -64,35 +57,32 @@ void pr_str(va_list val)
 void print_all(const char * const format, ...)
 {
 	int i, j;
+	va_list args;
+	char *sep;
 
-	va_list vls;
-	p_op ops[] = {
-		{"c", pr_char},
-		{"i", pr_int},
+p_op storage[] = {
+		{"c", pr_int},
 		{"f", pr_float},
 		{"s", pr_str},
-		{NULL, NULL}
+		{"i", pr_int},
 	};
+	i = 0;
+	sep = "";
+	va_start(args, format);
 
-	va_start(vls, format);
-	i = j = 0;
-	while (format && format[j])
+	while (format != NULL && format[i / 4] != '\0')
 	{
-		i = 0;
-		while (ops[i].op)
+		j = i % 4;
+		if (storage[j].op[0] == format[i / 4])
 		{
-			if (ops[i].op[0] == format[j])
-			{
-				(ops[i].f)(vls);
-				if (format[j + 1])
-					printf(", ");
-			}
-			i++;
+			printf("%s", sep);
+			storage[j].f(args);
+			sep = ", ";
 		}
-		j++;
+		i++;
 	}
-	_putchar(10);
-	va_end(vls);
+	printf("\n");
+	va_end(args);
 }
 
 
