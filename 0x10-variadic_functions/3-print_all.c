@@ -43,7 +43,7 @@ void pr_str(va_list val)
 	char *r;
 
 	r = va_arg(val, char *);
-if(r == NULL)
+if (r == NULL)
 	r = "(nil)";
 printf("%s", r);
 }
