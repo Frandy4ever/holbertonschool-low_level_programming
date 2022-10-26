@@ -8,37 +8,37 @@
 #include "variadic_functions.h"
 
 /**
- * pr_int - prints an integer type
- *@val: a va_list struct to process
+ * frandy_int - prints an integer type
+ * @val: a va_list struct to process
  */
-void pr_int(va_list val)
+void frandy_int(va_list val)
 {
 	printf("%d", va_arg(val, int));
 }
 
 /**
- * pr_char - prints a char type
+ * frandy_char - prints a char type
  * @val: a va_list struct to process
  */
-void pr_char(va_list val)
+void frandy_char(va_list val)
 {
 	printf("%c", va_arg(val, int));
 }
 
 /**
- * pr_float - prints a double type
+ * frandy_float - prints a double type
  * @val: a va_list struct to process
  */
-void pr_float(va_list val)
+void frandy_float(va_list val)
 {
 	printf("%f", va_arg(val, double));
 }
 
 /**
- * pr_str - prints a string type or (nil) empty/NULL
+ * frandy_str - prints a string type or (nil) empty/NULL
  * @val: a va_list struct to process
  */
-void pr_str(va_list val)
+void frandy_str(va_list val)
 {
 	char *r;
 
@@ -67,27 +67,27 @@ void print_all(const char * const format, ...)
 
 	va_list vls;
 	p_op ops[] = {
-		{"c", pr_char},
-		{"i", pr_int},
-		{"f", pr_float},
-		{"s", pr_str},
+		{"c", frandy_char},
+		{"i", frandy_int},
+		{"f", frandy_float},
+		{"s", frandy_str},
 		{NULL, NULL}
 	};
 
-	va_sart(vls, format);
+	va_start(vls, format);
 	i = j = 0;
 	while (format && format[j])
 	{
 		i = 0;
-		while (ops[i]op)
+		while (ops[i].op)
 		{
 			if (ops[i].op[0] == format[j])
 			{
 				(ops[i].f)(vls);
-				if (format[j + a])
+				if (format[j + 1])
 					printf(", ");
 			}
-			1++;
+			i++;
 		}
 		j++;
 	}
