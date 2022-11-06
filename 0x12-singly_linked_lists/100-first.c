@@ -5,7 +5,7 @@
 
 #include <stdio.h>
 
-void __attribute__((constructor)) here(void);
+void __attribute__((constructor)) hare(void);
 
 /**
  * here - Prints a string before the main functuon is executed
