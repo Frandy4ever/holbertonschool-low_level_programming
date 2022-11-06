@@ -14,13 +14,13 @@
 
 size_t list_len(const list_t *h)
 {
-	size_t linkedNodes = 0;
+	size_t elements = 0;
 
 	while (h)
 	{
-		linkedNodes++;
+		elements++;
 		h = h->next;
 	}
 
-	return (linkedNodes);
+	return (elements);
 }
