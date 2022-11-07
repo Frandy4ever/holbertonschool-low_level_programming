@@ -14,7 +14,7 @@
  */
 size_t listint_len(const listint_t *h)
 {
-	size_t linkedodes = 0;
+	size_t linkedNodes = 0;
 
 	while (h)
 	{
