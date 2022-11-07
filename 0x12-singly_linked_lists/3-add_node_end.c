@@ -3,7 +3,7 @@
  * Auth: Frandy Slueue @holbertonschool
  */
 
-#include "list.h"
+#include "lists.h"
 #include <string.h>
 
 /**

@@ -3,7 +3,7 @@
  * Auth: Frandy Slueue @holbertonschool
  */
 
-#include "list.h"
+#include "lists.h"
 #include <stdio.h>
 
 
@@ -16,7 +16,7 @@
 
 size_t print_list(const list_t *h)
 {
-	size_t listNode = 0;
+	size_t linkedNodes = 0;
 
 /*
  * while (h != NULL)
@@ -27,7 +27,7 @@ size_t print_list(const list_t *h)
  *	printf("[[0] (nil)\n");
  *	}
  *	printf("[%d] %s\n", h->len, h->str);
- *	listNode++;
+ *	linkedNodes++;
  *	h = h->next;
  * }
  */
@@ -42,10 +42,10 @@ size_t print_list(const list_t *h)
 
 			printf("[%d] %s\n", h->len, h->str);
 
-		listNode++;
+		linkedNodes++;
 		h = h->next;
 
 	}
 
-	return (listNode);
+	return (linkedNodes);
 }
