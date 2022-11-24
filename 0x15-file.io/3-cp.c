@@ -1,103 +1,79 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-
-char *create_buffer(char *file);
-void close_file(int fd);
 
 /**
- * create_buffer - Allocates 1024 bytes for a buffer.
- * @file: The name of the file buffer is storing chars for.
- *
- * Return: A pointer to the newly-allocated buffer.
+ * errHand - handles errors for cp
+ * @eNum: associated error number
+ * @buff: buffer memory location
+ * @a1: argv1 from main
+ * @a2: argv2 from main
+ * Return: void
  */
-char *create_buffer(char *file)
+void errHand(int eNum, char *buff, char *a1, char *a2)
 {
-	char *buffer;
-
-	buffer = malloc(sizeof(char) * 1024);
-
-	if (buffer == NULL)
-	{
-		dprintf(STDERR_FILENO,
-			"Error: Can't write to %s\n", file);
-		exit(99);
-	}
-
-	return (buffer);
-}
-
-/**
- * close_file - Closes file descriptors.
- * @fd: The file descriptor to be closed.
- */
-void close_file(int fd)
-{
-	int c;
-
-	c = close(fd);
-
-	if (c == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		exit(100);
-	}
-}
-
-/**
- * main - Copies the contents of a file to another file.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
- *
- * Return: 0 on success.
- *
- * Description: If the argument count is incorrect - exit code 97.
- *              If file_from does not exist or cannot be read - exit code 98.
- *              If file_to cannot be created or written to - exit code 99.
- *              If file_to or file_from cannot be closed - exit code 100.
- */
-int main(int argc, char *argv[])
-{
-	int from, to, r, w;
-	char *buffer;
-
-	if (argc != 3)
+	free(buff);
+	if (eNum == 97)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
+	else if (eNum == 98)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", a1);
+		exit(98);
+	}
+	else if (eNum == 99)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", a2);
+		exit(99);
+	}
+}
 
-	buffer = create_buffer(argv[2]);
-	from = open(argv[1], O_RDONLY);
-	r = read(from, buffer, 1024);
-	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+/**
+ * main - check the code
+ * @argc: total arguments supplied to cp
+ * @argv: pointer to array of argv strs supplied to cp
+ * Return: always 0
+ */
+int main(int argc, char *argv[])
+{
+	char *buff, *a1, *a2;
+	int openRetVal1 = 0, openRetVal2 = 0, writeRetVal = 0,
+	readRetVal = 0, closeVal1 = 0, closeVal2 = 0;
 
-	do {
-		if (from == -1 || r == -1)
-		{
-			dprintf(STDERR_FILENO,
-				"Error: Can't read from file %s\n", argv[1]);
-			free(buffer);
-			exit(98);
-		}
-
-		w = write(to, buffer, r);
-		if (to == -1 || w == -1)
-		{
-			dprintf(STDERR_FILENO,
-				"Error: Can't write to %s\n", argv[2]);
-			free(buffer);
-			exit(99);
-		}
-
-		r = read(from, buffer, 1024);
-		to = open(argv[2], O_WRONLY | O_APPEND);
-
-	} while (r > 0);
-
-	free(buffer);
-	close_file(from);
-	close_file(to);
-
+	a1 = argv[1];
+	a2 = argv[2];
+	buff = malloc(1024);
+	if (argc != 3)
+		errHand(97, buff, a1, a2);
+	if (!(buff))
+		exit(EXIT_FAILURE);
+	openRetVal1 = open(argv[1], O_RDONLY);
+	readRetVal = read(openRetVal1, buff, 1024);
+	openRetVal2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (readRetVal < 0 || openRetVal1 < 0)
+		errHand(98, buff, a1, a2);
+	while (readRetVal > 0)
+	{
+		if (readRetVal < 0 || openRetVal1 < 0)
+			errHand(98, buff, a1, a2);
+		writeRetVal = write(openRetVal2, buff, readRetVal);
+		if (writeRetVal < 0 || openRetVal2 < 0)
+			errHand(99, buff, a1, a2);
+		readRetVal = read(openRetVal1, buff, 1024);
+		openRetVal2 = open(argv[2], O_WRONLY | O_APPEND);
+	}
+	free(buff);
+	closeVal1 = close(openRetVal1);
+	closeVal2 = close(openRetVal2);
+	if (closeVal1 < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", closeVal1);
+		exit(100);
+	}
+	if (closeVal2 < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", closeVal2);
+		exit(100);
+	}
 	return (0);
 }
